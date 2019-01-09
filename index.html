@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <title>My New Pen!</title>
+  
+  <!--  Styles  -->
+  <link rel="stylesheet" href="styles/index.processed.css">
+  
+</head>
+<body>
+  
+  <div id="contenedor"> 
+  <!--Sección 1: Bienvenida-->
+<section id="seccion1"> 
+  <div id="logo"> <img src="http://i66.tinypic.com/28s1vl3.jpg" height="150px"> </div>
+<h1>Bienvenido </h1>
+    
+<!--Se agrega un formulario para que el usuario pueda escribir su nombre en el campo de texto y utilizar el boton para ir a la siguiente página.-->
+    <input class="style2" type="text" id="name-input" placeholder="Ingresa tu nombre">  </input>
+     <input class="style1" type="button" value="COMENZAR" onclick="siguiente()">  </input>
+</section> 
+
+<!--Sección 2: Inicio e instrucciones-->
+<section class="hide" id="seccion2">
+   <!--Saludo y nombre-->
+     <h1> ¡Hola! <span id="print-name"> Usuario </span> </h1>
+  <p> ¡Pon a prueba tus conocimientos sobre el mundo de Marvel! <br> 
+      Elige una categoría y responde las preguntas <br> 
+    ¡Mucha suerte! </p>
+  <!--Se agrega un div que contiene un formulario con dos botones-->
+  <div id="categorias">  
+      <input id="botonh" type="button" onclick="heroes()"> </input> 
+    <input id="botonv" type= "button" onclick="villanos()"></input> 
+  </section>    
+<!--Sección 3: Pregunta1-->
+<section class="hide" id="pregunta1h">
+   <h1> ¿Cuál es el nombre real del Capitán América?</h1>
+  <div> 
+    <form>
+     <input class="style3" type="button" value="Steve Dikto" onclick="heroes2()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Stan Lee" onclick="heroes2()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Steve Roger" onclick="heroesc2()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Bruce Wine 4 "onclick="heroes2()"> </input>
+    </form>
+  </div>
+</section>
+
+<!--Sección 4: Pregunta 2 Heroes -->
+<section class="hide" id="pregunta2h">
+  <h1> ¿Dónde ubicó Charles Xavier su escuela para jóvenes dotados? </h1>
+  <div> 
+    <form>
+     <input class="style3" type="button" value="Westchester, New York" onclick="heroesc3()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Los Ángeles, California" onclick="heroes3()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Trenton, New Jersey" onclick="heroes3()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Chicago, Illinois" onclick="heroes3()"> </input>
+    </form>
+  </div>
+</section>
+<!--Sección 5: Pregunta 3 Heroes -->
+<section class="hide" id="pregunta3h">
+  <h1> ¿Qué trabajo realiza Peter Parker para el Daily Bugle?</h1>
+  <div> 
+    <form>
+     <input class="style3" type="button" value="Repartidor" onclick="heroes4()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Escritor" onclick="heroes4()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Editor" onclick="heroes4()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Fotógrafo" onclick="heroesc4()"> </input>
+    </form>
+  </div>
+</section>
+
+<!--Sección 6: Pregunta 1 Villanos -->
+<section class="hide" id="pregunta1v">
+  <h1> ¿Quien fue el primer heraldo de Galactus?</h1>
+  <div> 
+    <form>
+     <input class="style3" type="button" value="Fallen One" onclick="villanosc2()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Silver Surfer" onclick="villanos2()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Firelord" onclick="villanos2()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Terrax" onclick="villanos2()"> </input>
+    </form>
+  </div>
+</section>
+
+<!--Sección 7: Pregunta 2 Villanos -->
+<section class="hide" id="pregunta2v">
+  <h1> ¿Cuál es el némesis del Capitan América?</h1>
+  <div> 
+    <form>
+     <input class="style3" type="button" value="Guasón" onclick="villanos3()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Craneo Rojo" onclick="villanosc3()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Duende verde" onclick="villanos3()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Thanos" onclick="villanos3()"> </input>
+    </form>
+  </div>
+</section>
+
+<!--Sección 8: Pregunta 3 Villanos -->
+<section class="hide" id="pregunta3v">
+  <h1> ¿Como se llama la nación que gobierna el Dr. Doom?</h1>
+  <div> 
+    <form>
+     <input class="style3" type="button" value="Santo Marco" onclick="villanos4()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Wakanda" onclick="villanos4()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Xandar" onclick="villanos4()"> </input> <br/><br/>
+     <input class="style3" type="button" value="Latveria" onclick="villanosc4()"> </input>
+    </form>
+  </div>
+</section>
+
+<!--Sección 9: Respuestas y jugar de nuevo -->
+<section class="hide" id="respuestas">
+  <h1> Resultado </h1>
+  <div> <p> Respuestas correctas </p> <span id="correctas">  </span>  </div><div> <p>Respuestas incorrectas</p> <span id="incorrectas">  </span></div>
+  <p> Volver a jugar </p> 
+  
+    <div id="categorias">  
+    <form>
+      <input id="botonh" type="button" value="Heroes" onclick="playAgainH()"> </input> 
+    <input id="botonv" type= "button" value ="Villanos" onclick="playAgainV()"></input> 
+    </form>
+  </div>   
+  
+</section>
+<!--Cierre contenedor-->
+</div>
+  
+<script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>
