@@ -1,2 +1,2 @@
-# hello-world
+# Marvel Trivia
 Marvel Trivia
